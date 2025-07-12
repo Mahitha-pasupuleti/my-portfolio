@@ -1,0 +1,22 @@
+.theme-toggle-btn {
+  position: fixed;
+  top: 4.5rem;    /* vertical position */
+  right: 1rem;    /* distance from right edge */
+  z-index: 9999;
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--primary);
+  border-radius: 9999px;
+  background: transparent;
+  color: var(--primary);
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 0 10px var(--primary);
+  backdrop-filter: blur(6px);
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.theme-toggle-btn:hover {
+  background-color: var(--primary);
+  color: var(--background);
+  box-shadow: 0 0 14px var(--primary);
+}

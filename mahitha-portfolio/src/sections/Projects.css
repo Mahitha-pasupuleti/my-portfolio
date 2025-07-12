@@ -1,0 +1,116 @@
+.projects-section {
+  background-color: var(--section-bg);
+  padding: 2rem 1.5rem 6rem 1.5rem;
+  max-width: 100%;
+  margin: 0 auto;
+  margin-bottom: 5.5rem;
+}
+
+.projects-container {
+  max-width: 1280px;
+  margin: 0 auto;  /* centers content */
+}
+
+.projects-section h2 {
+  font-size: 2.4rem;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  padding: 0 0 1rem 0;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  gap: 2.2rem;
+}
+
+.project-card {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  text-decoration: none;
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.project-card:hover,
+.project-card:focus {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow);
+}
+
+.project-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-content {
+  padding: 1.5rem 1.8rem 2rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-content h3 {
+  margin: 0 0 0.8rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.project-content p {
+  flex-grow: 1;
+  margin: 0 0 1.2rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--text);
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.tech-badge {
+  background-color: rgba(59, 130, 246, 0.1);
+  color: var(--primary);
+  font-size: 0.92rem;
+  font-weight: 600;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  border: 1px solid var(--primary);
+  backdrop-filter: blur(4px);
+  user-select: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.tech-badge:hover {
+  background-color: var(--primary);
+  color: var(--bg);
+  box-shadow: 0 2px 8px rgba(30, 64, 175, 0.5);
+  cursor: pointer;
+}
+
+/* Responsive tweaks */
+@media (max-width: 480px) {
+  .projects-section {
+    padding: 2rem 0.5rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-image {
+    height: 180px;
+  }
+}

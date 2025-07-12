@@ -1,0 +1,112 @@
+.hero-about {
+  height: 100vh;
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 clamp(1rem, 4vw, 6rem);
+  gap: 3rem;
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.hero-about-text {
+  flex: 1;
+  max-width: 600px;
+}
+
+.hero-about-text h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.tagline {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  color: var(--primary);
+}
+
+.about-me {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: var(--text);
+}
+
+.hero-about-buttons {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 0.75rem 2.5rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: var(--bg);
+  border-color: var(--primary);
+}
+
+.btn-primary:hover {
+  background-color: var(--hover-color);
+  border-color: var(--hover-color);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-secondary:hover {
+  background-color: var(--primary);
+  color: var(--bg);
+}
+
+.hero-about-image {
+  flex: 1;
+  max-width: 400px;
+  text-align: center;
+}
+
+.hero-about-image img {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.hero-about-image img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-about {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-about-text, .hero-about-image {
+    max-width: 100%;
+  }
+
+  .hero-about-buttons {
+    justify-content: center;
+  }
+
+  .hero-about-image {
+    margin-top: 2rem;
+  }
+}

@@ -1,0 +1,67 @@
+
+.techstack {
+  max-width: 720px;
+  margin: 4rem auto;
+  padding: 0 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text);
+  text-align: center;
+}
+
+.techstack h2 {
+  font-weight: 600;
+  font-size: 2.1rem;
+  margin-bottom: 2rem;
+  color: var(--primary);
+  letter-spacing: 0.05em;
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 1.3rem;
+  justify-items: center;
+}
+
+.tech-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: default;
+  padding: 0.6rem 0;
+  user-select: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.25s ease, color 0.25s ease;
+}
+
+.tech-card:hover,
+.tech-card:focus {
+  border-bottom: 1.5px solid var(--primary);
+  color: var(--primary);
+  outline: none;
+}
+
+.tech-icon {
+  font-size: 1.9rem;
+  margin-bottom: 0.45rem;
+  color: inherit;
+}
+
+/* Dark Mode support */
+@media (prefers-color-scheme: dark) {
+  .techstack {
+    color: var(--text-light);
+  }
+  .tech-card {
+    color: var(--text-secondary-light);
+    border-bottom: 1px solid transparent;
+  }
+  .tech-card:hover,
+  .tech-card:focus {
+    border-bottom: 1.5px solid var(--primary-light);
+    color: var(--primary-light);
+  }
+}

@@ -1,0 +1,37 @@
+:root {
+  --bg: #ffffff;
+  --text: #000000;
+  --primary: #2b6cb0;
+  --card-bg: #f9f9f9;
+  --section-bg: #f9fafb;
+  --text-light: #6b7280;
+  --shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+html.dark-mode {
+  --bg: #121212;
+  --text: #ffffff;
+  --primary: #90cdf4;
+  --card-bg: #282828; /* Slight contrast with dark background */
+  --section-bg: #1f2937;
+  --text-light: #9ca3af;
+  --shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Poppins', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
