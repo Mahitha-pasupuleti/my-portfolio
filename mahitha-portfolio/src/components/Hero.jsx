@@ -1,27 +1,67 @@
 import './Hero.css';
-import mahithaImage from "../assets/Test.jpg";
+import mahithaImage from '../assets/Test.jpg';
+import { FaLinkedin, FaGithub } from 'react-icons/fa';
+import { Typewriter } from 'react-simple-typewriter';
 
-function HeroAbout() {
+function Hero() {
   return (
-    <section className="hero-about">
-      <div className="hero-about-text">
-        <h1>Hi, I’m Mahitha 👋</h1>
-        <p className="tagline">
-          I build scalable apps, real-time systems, and love UI/UX.
+    <section className="hero-section">
+      <div className="hero-left">
+        <div className="typewriter">
+          <Typewriter
+            words={[
+              "I'm a passionate software developer.",
+              "I love building scalable applications.",
+              "I enjoy debugging.",
+            ]}
+            loop={0}
+            cursor
+            cursorStyle="|"
+            typeSpeed={60}
+            deleteSpeed={40}
+            delaySpeed={2000}
+          />
+        </div>
+
+        <h1 className="hero-title">
+          Hello I’m <br />
+          <span className="hero-name">
+            Mahitha <br /> Pasupuleti
+          </span>
+        </h1>
+        <p className="hero-description">
+          A passionate Full Stack Developer and Master’s student in Computer Science at California State University, Fullerton.
         </p>
-        <p className="about-me">
-          I’m a passionate software developer specializing in creating seamless user experiences and efficient backend systems. I enjoy turning complex problems into elegant solutions.
-        </p>
-        <div className="hero-about-buttons">
-          <a href="#projects" className="btn btn-primary">View Projects</a>
-          <a href="#contact" className="btn btn-secondary">Contact Me</a>
+
+        <div className="hero-bottom">
+          <a href="/Mahitha Pasupuleti - Software Engineer Intern - 3 years experienced.pdf" className="resume-btn" download>
+            DOWNLOAD RESUME
+          </a>
+
+          <div className="social-icons">
+            <a
+              href="https://www.linkedin.com/in/mahitha-pasupuleti"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaLinkedin />
+            </a>
+            <a
+              href="https://github.com/Mahitha-pasupuleti"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaGithub />
+            </a>
+          </div>
         </div>
       </div>
-      <div className="hero-about-image">
-        <img src={mahithaImage} alt="Mahitha smiling" />
+
+      <div className="hero-right">
+        <img src={mahithaImage} alt="Mahitha Pasupuleti" />
       </div>
     </section>
   );
 }
 
-export default HeroAbout;
+export default Hero;

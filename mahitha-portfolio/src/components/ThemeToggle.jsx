@@ -1,17 +1,6 @@
-import { useState, useEffect } from 'react';
 import './ThemeToggle.css';
 
-export default function ThemeToggle() {
-  const [theme, setTheme] = useState('light');
-
-  useEffect(() => {
-    if (theme === 'dark') {
-      document.documentElement.classList.add('dark-mode');
-    } else {
-      document.documentElement.classList.remove('dark-mode');
-    }
-  }, [theme]);
-
+export default function ThemeToggle({ theme, setTheme }) {
   const toggleTheme = () => {
     setTheme(theme === 'dark' ? 'light' : 'dark');
   };

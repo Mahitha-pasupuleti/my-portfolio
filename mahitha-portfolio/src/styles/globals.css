@@ -9,10 +9,10 @@
 }
 
 html.dark-mode {
-  --bg: #121212;
+  --bg: #101E2A;
   --text: #ffffff;
-  --primary: #90cdf4;
-  --card-bg: #282828; /* Slight contrast with dark background */
+  --primary: #4BE2F2;  /* 121212, 90cdf4, 1f2937 */
+  --card-bg: #131f2a; /* Slight contrast with dark background */
   --section-bg: #1f2937;
   --text-light: #9ca3af;
   --shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
@@ -27,11 +27,24 @@ body {
   padding: 0;
   background-color: var(--bg);
   color: var(--text);
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Playfair Display', serif;
+  /* font-family: 'Poppins', sans-serif; */
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
 }
 
 a {
   color: var(--primary);
   text-decoration: none;
+}
+
+canvas {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  z-index: -1 !important;
+  pointer-events: none;
 }
