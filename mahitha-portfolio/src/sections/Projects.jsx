@@ -32,7 +32,7 @@ const projects = [
   {
     title: "CampusFlow",
     image: CampusFlowImg,
-    description: "Built using design patterns for extensible rental solutions.",
+    description: "One stop destination for all campus solutions.",
     techStack: ["Java", "Spring Boot", "Spring Security", "Microservices", "Git", "Maven"],
     link: "https://github.com/Mahitha-pasupuleti/CampusFlow",
   },
