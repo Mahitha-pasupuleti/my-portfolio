@@ -5,7 +5,7 @@ import { Typewriter } from 'react-simple-typewriter';
 
 function Hero() {
   return (
-    <section className="hero-section">
+    <section className="hero-section" id="hero">
       <div className="hero-left">
         <div className="typewriter">
           <Typewriter

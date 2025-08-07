@@ -6,8 +6,10 @@
 }
 
 .projects-container {
-  max-width: 1280px;
+  max-width: 1200px; /* same as experience max-width */
   margin: 0 auto;
+  padding: 0 1.5rem;  /* add horizontal padding */
+  box-sizing: border-box;
 }
 
 .projects-section h2 {
@@ -52,7 +54,7 @@
   background-repeat: no-repeat;
   border-radius: 12px 12px 0 0;
   filter: brightness(0.9);
-  transition: filter 0.3s ease;
+  transition: height 0.3s ease;
 }
 
 .project-card:hover .project-image-background {
@@ -113,7 +115,28 @@
   cursor: pointer;
 }
 
+
 /* Responsive tweaks */
+@media (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  }
+
+  .project-image-background {
+    height: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-image-background {
+    height: 240px;
+  }
+}
+
 @media (max-width: 480px) {
   .projects-section {
     padding: 2rem 0.5rem;

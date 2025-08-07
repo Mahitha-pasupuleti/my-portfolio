@@ -10,7 +10,7 @@ export default function Footer() {
 
         <div className="footer-icons">
           <a
-            href="https://www.linkedin.com/in/mahitha-pasupuleti/"
+            href="https://github.com/Mahitha-pasupuleti"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
@@ -18,7 +18,7 @@ export default function Footer() {
             <FiGithub />
           </a>
           <a
-            href="https://github.com/Mahitha-pasupuleti"
+            href="https://www.linkedin.com/in/mahitha-pasupuleti/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"

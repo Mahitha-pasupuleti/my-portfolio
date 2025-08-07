@@ -12,15 +12,20 @@ import ExperienceSection from './sections/ExperienceSection.jsx';
 import './App.css';
 
 function App() {
-  const [theme, setTheme] = useState('dark');
+  const [theme, setTheme] = useState(() => 
+  document.documentElement.classList.contains('dark-mode') ? 'dark' : 'light'
+);
 
-  useEffect(() => {
-    if (theme === 'dark') {
-      document.documentElement.classList.add('dark-mode');
-    } else {
-      document.documentElement.classList.remove('dark-mode');
-    }
-  }, [theme]);
+useEffect(() => {
+  if (theme === 'dark') {
+    document.documentElement.classList.add('dark-mode');
+    localStorage.setItem('theme', 'dark');
+  } else {
+    document.documentElement.classList.remove('dark-mode');
+    localStorage.setItem('theme', 'light');
+  }
+}, [theme]);
+
 
   return (
     <>

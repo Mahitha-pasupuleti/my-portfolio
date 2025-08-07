@@ -1,13 +1,16 @@
+
 .navbar {
   position: fixed;
   top: 0;
+  left: 0;
+  right : 0;
   width: 100%;
-  padding: 1.5rem 0rem; /* remove side padding */
+  padding: 1.2rem 0;
   background-color: var(--bg);
   border-bottom: 1px solid rgba(100, 100, 100, 0.15);
   backdrop-filter: blur(12px);
   z-index: 1000;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+  box-shadow: var(--shadow);
 }
 
 .navbar-container {
@@ -19,19 +22,18 @@
   align-items: center;
 }
 
-.navbar-spacer {
-  width: 320px;
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
   flex-shrink: 0;
 }
 
-/* Logo */
 .logo a {
   text-decoration: none;
   font-size: 1.6rem;
   font-weight: 700;
   color: var(--primary);
-  letter-spacing: 0.5px;
-  transition: color 0.3s ease;
 }
 
 .logo a:hover {
@@ -47,7 +49,7 @@
   padding: 0;
 }
 
-.nav-links a {
+.nav-links li a {
   text-decoration: none;
   font-size: 1rem;
   font-weight: 600;
@@ -56,7 +58,7 @@
   transition: color 0.3s ease;
 }
 
-.nav-links a::after {
+.nav-links li a::after {
   content: '';
   position: absolute;
   left: 0;
@@ -67,28 +69,48 @@
   transition: width 0.3s ease;
 }
 
-.nav-links a:hover {
+.nav-links li a:hover {
   color: var(--primary);
 }
 
-.nav-links a:hover::after {
+.nav-links li a:hover::after {
   width: 100%;
 }
 
-/* Responsive (optional for now) */
+/* Hamburger icon (for mobile) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: var(--text);
+}
+
+/* Mobile Styles */
 @media (max-width: 768px) {
-  .navbar-container {
-    flex-direction: column;
-    align-items: flex-start;
+  .hamburger {
+    display: flex;
   }
 
   .nav-links {
+    display: none;
     flex-direction: column;
-    gap: 1.2rem;
-    margin-top: 1rem;
+    background-color: var(--bg);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 1rem 2rem;
+    box-shadow: var(--shadow);
+    z-index: 999;
   }
 
-  .navbar-spacer {
-    width: 0;
+  .nav-links.open {
+    display: flex;
   }
 }

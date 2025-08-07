@@ -1,22 +1,23 @@
 .theme-toggle-btn {
   position: fixed;
-  top: 4.5rem;    /* vertical position */
-  right: 1rem;    /* distance from right edge */
-  z-index: 9999;
-  padding: 0.5rem 1rem;
-  border: 2px solid var(--primary);
+  top: 5.5rem;
+  right: 1rem;
+  z-index: 999;
+  padding: 0.4rem 0.6rem;
+  border: 1.5px solid var(--borderColor);
   border-radius: 9999px;
-  background: transparent;
+  background-color: rgba(255, 255, 255, 0.1);
   color: var(--primary);
   font-weight: 600;
   cursor: pointer;
-  box-shadow: 0 0 10px var(--primary);
+  box-shadow: 0 0 6px rgba(99, 102, 241, 0.3);
   backdrop-filter: blur(6px);
   transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  font-size: 0.85rem;
 }
 
 .theme-toggle-btn:hover {
   background-color: var(--primary);
   color: var(--background);
-  box-shadow: 0 0 14px var(--primary);
+  box-shadow: 0 0 10px var(--primary);
 }

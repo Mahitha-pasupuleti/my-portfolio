@@ -43,7 +43,7 @@ export default function Contact() {
 
           <div className="info-item">
             <FiMapPin className="info-icon" />
-            <span>San Jose, CA (Pacific Time)</span>
+            <span>Fullerton, CA (Pacific Time)</span>
           </div>
 
           <div className="info-item">
