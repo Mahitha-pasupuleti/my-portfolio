@@ -1,6 +1,7 @@
 import './Hero.css';
 import mahithaImage from '../assets/Test.jpg';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
+import { SiLeetcode } from "react-icons/si";
 import { Typewriter } from 'react-simple-typewriter';
 
 function Hero() {
@@ -52,6 +53,13 @@ function Hero() {
               rel="noopener noreferrer"
             >
               <FaGithub />
+            </a>
+            <a
+              href="https://leetcode.com/u/Mahitha_Pasupuleti/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <SiLeetcode />
             </a>
           </div>
         </div>
