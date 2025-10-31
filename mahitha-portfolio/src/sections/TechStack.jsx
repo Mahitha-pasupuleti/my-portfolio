@@ -135,7 +135,7 @@ const skillsData = [
   {
     category: "Programming Languages",
     iconClass: "fas fa-code",
-    skills: ["Java", "JavaScript", "Python", "TypeScript", "SQL", "C", "C++"]
+    skills: ["Java", "JavaScript", "Python", "SQL", "C", "C++", "TypeScript"]
   },
   {
     category: "Programming & Design Concepts",
@@ -151,10 +151,10 @@ const skillsData = [
     category: "Software Architecture",
     iconClass: "fas fa-building",
     skills: ["Microservices", "Monolithic", "Event-Driven", 
-      "Service-Oriented", "Event Sourcing", "Rest API Architecture", "Message Queues (SQS, Pub/Sub Systems)", 
-      "API Gateway", "Load Balancing", "Caching Strategies", "Distributed Systems", "Service Mesh",
+      "Service-Oriented", "Event Sourcing", "Service Mesh", "Message Queues (SQS, Pub/Sub Systems)", 
+      "API Gateway", "Load Balancing", "Caching Strategies", "Distributed Systems", "Rest API Architecture",
       "Scalability & High Availability", "Fault Tolerance", "Serverless", 
-      "Reverse Proxy (NGINX)", "CI/CD (Jenkins, GitHub Actions)"]
+      "Reverse Proxy (NGINX)", "CI/CD (Jenkins)"]
   },
   {
     category: "Backend & Microservices",

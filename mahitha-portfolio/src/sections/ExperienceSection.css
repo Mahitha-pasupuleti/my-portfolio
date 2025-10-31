@@ -1,5 +1,5 @@
 /* ============================================
-   EXPERIENCE SECTION
+   EXPERIENCE SECTION (Responsive Timeline)
    ============================================ */
 
 .experience {
@@ -41,17 +41,17 @@
   border-radius: 9999px;
 }
 
-/* Timeline */
+/* Timeline (desktop/tablet) */
 .timeline {
   position: relative;
   margin: 0 auto;
-  padding-left: 60px; /* space for timeline */
+  padding-left: 60px; /* space for timeline line */
 }
 
 .timeline::before {
   content: '';
   position: absolute;
-  left: 30px; /* left-aligned line */
+  left: 30px; /* vertical line */
   top: 0;
   width: 4px;
   height: 100%;
@@ -59,18 +59,16 @@
   border-radius: 9999px;
 }
 
-/* Timeline Item */
 .timeline-item {
   position: relative;
   margin-bottom: 3rem;
   display: flex;
-  justify-content: flex-start; /* all boxes on right */
+  justify-content: flex-start;
 }
 
-/* Marker */
 .timeline-marker {
   position: absolute;
-  left: 30px; /* aligns with timeline line */
+  left: 30px;
   width: 20px;
   height: 20px;
   background: #F2507B;
@@ -80,14 +78,13 @@
   top: 0;
 }
 
-/* Content Box */
 .timeline-content {
   background: #1f2937;
   padding: 2rem;
   border-radius: 1rem;
   box-shadow: 0 10px 15px rgba(0,0,0,0.1);
   width: calc(100% - 60px);
-  margin-left: 50px; /* distance from timeline */
+  margin-left: 50px;
   transition: all 0.3s ease;
 }
 
@@ -96,7 +93,6 @@
   box-shadow: 0 15px 25px rgba(0,0,0,0.2);
 }
 
-/* Date */
 .timeline-date {
   display: inline-block;
   padding: 0.4rem 1rem;
@@ -108,7 +104,6 @@
   margin-bottom: 1rem;
 }
 
-/* Title & Company */
 .timeline-title {
   font-size: 1.5rem;
   font-weight: 700;
@@ -123,9 +118,8 @@
   margin-bottom: 1rem;
 }
 
-/* Description with normal bullets */
 .timeline-description {
-  list-style-type: disc; /* normal bullets */
+  list-style-type: disc;
   margin-bottom: 1.5rem;
   padding-left: 1.5rem;
   color: #d1d5db;
@@ -134,16 +128,8 @@
 .timeline-description li {
   margin-bottom: 0.75rem;
   line-height: 1.6;
-  padding-left: 0; /* remove pseudo padding */
-  position: relative;
 }
 
-/* Remove any previous pseudo bullet */
-.timeline-description li::before {
-  content: none;
-}
-
-/* Tags */
 .timeline-tags {
   display: flex;
   flex-wrap: wrap;
@@ -159,8 +145,20 @@
   color: #d1d5db;
 }
 
-/* Responsive */
+/* ============================
+   RESPONSIVE DESIGN
+   ============================ */
+
+/* Tablets */
 @media (max-width: 768px) {
+  .experience {
+    padding: 4rem 1.5rem;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+  }
+
   .timeline {
     padding-left: 40px;
   }
@@ -171,6 +169,65 @@
 
   .timeline-content {
     width: calc(100% - 40px);
-    margin-left: 40px;
+    margin-left: 30px;
+    padding: 1.5rem;
+  }
+
+  .timeline-title {
+    font-size: 1.25rem;
+  }
+
+  .timeline-company {
+    font-size: 1rem;
+  }
+
+  .timeline-date {
+    font-size: 0.8rem;
+  }
+}
+
+/* Small Mobile: remove line and marker, stack cards */
+@media (max-width: 480px) {
+  .timeline {
+    padding-left: 0;
+  }
+
+  .timeline::before {
+    display: none;
+  }
+
+  .timeline-marker {
+    display: none;
+  }
+
+  .timeline-content {
+    width: 100%;
+    margin-left: 0;
+    padding: 1.2rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .timeline-title {
+    font-size: 1.1rem;
+  }
+
+  .timeline-company {
+    font-size: 0.9rem;
+  }
+
+  .timeline-date {
+    font-size: 0.75rem;
+  }
+
+  .timeline-description {
+    font-size: 0.85rem;
+  }
+
+  .tag-pill {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.6rem;
   }
 }

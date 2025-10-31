@@ -139,3 +139,9 @@
     justify-content: center;
   }
 }
+
+@media (max-width: 480px) {
+  .typewriter {
+    display: none;
+  }
+}
