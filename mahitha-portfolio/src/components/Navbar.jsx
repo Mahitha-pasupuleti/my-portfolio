@@ -27,7 +27,8 @@ function Navbar() {
           <li><a href="#hero" onClick={toggleMenu}>Home</a></li>
           <li><a href="#experience" onClick={toggleMenu}>Experience</a></li>
           <li><a href="#projects" onClick={toggleMenu}>Projects</a></li>
-          <li><a href="#tech" onClick={toggleMenu}>Tech Stack</a></li>
+          <li><a href="#skills" onClick={toggleMenu}>Tech Stack</a></li>
+          <li><a href="#articles" onClick={toggleMenu}>Articles</a></li>
           <li><a href="#contact" onClick={toggleMenu}>Contact</a></li>
         </ul>
       </div>

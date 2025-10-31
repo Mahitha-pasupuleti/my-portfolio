@@ -5,6 +5,7 @@ import './Footer.css';
 export default function Footer() {
   return (
     <footer className="footer">
+
       <div className="footer-content">
         <p className="footer-name">Mahitha © {new Date().getFullYear()}</p>
 

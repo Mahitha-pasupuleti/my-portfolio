@@ -1,0 +1,234 @@
+/* =========================
+   Section & Titles
+========================= */
+.medium-articles-section {
+  padding: 4rem 2rem;
+  /* background-color: #101E2A; dark background */
+}
+
+.section-title-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.section-title {
+  color: #4BE2F2; /* primary color */
+  font-size: 2rem;
+}
+
+.medium-link-icon {
+  color: #4BE2F2;
+  font-size: 1rem;
+  transition: color 0.2s ease;
+}
+
+.medium-link-icon:hover {
+  color: #ffffff;
+}
+
+/* =========================
+   Master-Detail Layout
+========================= */
+.articles-master-detail {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+}
+
+/* Featured Article - STATIC SIZE */
+.featured-article {
+  flex: none; /* prevent flex growth */
+  width: 850px; /* fixed width */
+  height: 650px; /* fixed height */
+  background: #131f2a;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+  border-left: 6px solid #4BE2F2;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* Title */
+.featured-article h3 {
+  margin-top: 0;
+  color: #ffffff; /* or try #4BE2F2 for accent blue */
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Featured Image */
+.featured-thumb {
+  margin: 1rem 0;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.featured-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* =========================
+   Scrollable Content Inside Fixed Container
+========================= */
+.full-content {
+  flex: 1;          /* fill remaining space */
+  overflow-y: auto; /* scrollable */
+  padding: 1rem 1.2rem;
+  background-color: #131f2ae2;
+  color: #ffffffc5;
+  line-height: 1.6;
+  font-size: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+  margin-bottom: 1rem;
+}
+
+/* Paragraphs inside scrollable content */
+.full-content p {
+  margin-bottom: 1rem;
+}
+
+/* Headings */
+.full-content h1,
+.full-content h2,
+.full-content h3 {
+  color: #06d6a0;
+  margin: 1rem 0 0.5rem 0;
+  font-weight: 600;
+}
+
+/* Specific sizes */
+.full-content h1 { font-size: 1.8rem; }
+.full-content h2 { font-size: 1.5rem; }
+.full-content h3 { font-size: 1.2rem; }
+
+/* Bold text */
+.full-content strong {
+  color: #ffffffc5;
+}
+
+/* Links */
+.full-content a {
+  color: #ffffffc5;
+  text-decoration: underline;
+}
+.full-content a:hover {
+  color: #101E2A;
+}
+
+/* Images inside content */
+.full-content img {
+  max-width: 100%;
+  border-radius: 12px;
+  margin: 1rem 0;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+/* Blockquotes */
+.full-content blockquote {
+  border-left: 4px solid #ffffffc5;
+  padding-left: 1rem;
+  color: #ffffff84;
+  font-style: italic;
+  margin: 1rem 0;
+}
+
+
+/* Lists */
+.full-content ul,
+.full-content ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Inline code */
+.full-content code {
+  background: #f3f4f6;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 0.9rem;
+}
+
+/* Read More link at bottom */
+.read-more {
+  margin-top: auto;
+  display: inline-block;
+  text-decoration: none;
+  color: #4BE2F2;
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: block;
+  padding-bottom: 25px;
+}
+
+.read-more:hover {
+  color: #ffffff;
+}
+
+/* =========================
+   Sidebar Articles
+========================= */
+.other-articles {
+  flex: none; /* prevent flex growth */
+  width: 300px; /* fixed width */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sidebar-article-card {
+  background: var(--card-bg);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.sidebar-article-card:hover {
+  transform: translateX(5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.sidebar-article-card.active {
+  border-left: 4px solid #4BE2F2;
+}
+
+/* Date styling */
+.sidebar-article-card .date {
+  font-size: 0.8rem;
+  color: #9ca3af;
+}
+
+/* =========================
+   Responsive
+========================= */
+@media (max-width: 1024px) {
+  .articles-master-detail {
+    flex-direction: column;
+    align-items: center;
+  }
+  .featured-article, .other-articles {
+    width: 100%;
+    height: auto; /* allow smaller screens to adapt */
+  }
+}
+
+@media (max-width: 768px) {
+  .full-content {
+    max-height: 400px;
+  }
+  .featured-thumb {
+    max-height: 150px;
+  }
+}

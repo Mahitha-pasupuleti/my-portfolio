@@ -1,181 +1,176 @@
-/* ExperienceSection.css */
+/* ============================================
+   EXPERIENCE SECTION
+   ============================================ */
 
-.experience-section {
-  /* background-color: var(--section-bg); */
-  color: var(--text);
-  padding: 3rem 1.5rem;
+.experience {
+  padding: 6rem 2rem;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Container */
+.container {
   max-width: 1200px;
   margin: 0 auto;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Section Header */
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-label {
+  color: #F2507B;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.875rem;
 }
 
 .section-title {
-  font-size: 2.5rem;
+  font-size: 2.25rem;
   font-weight: 700;
-  text-align: center;
-  margin-bottom: 2.5rem;
-  color: var(--primary);
+  color: white;
+  margin: 0.5rem 0;
 }
 
-.experience-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2rem;
+.section-divider {
+  width: 8rem;
+  height: 0.25rem;
+  background: #F2507B;
+  margin: 1rem auto 0;
+  border-radius: 9999px;
 }
 
-.experience-card {
-  background-color: var(--card-bg);
-  box-shadow: var(--shadow);
-  border-radius: 12px;
-  padding: 1.75rem 2rem;
+/* Timeline */
+.timeline {
+  position: relative;
+  margin: 0 auto;
+  padding-left: 60px; /* space for timeline */
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 30px; /* left-aligned line */
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, #F2507B 0%, #a12647 100%);
+  border-radius: 9999px;
+}
+
+/* Timeline Item */
+.timeline-item {
+  position: relative;
+  margin-bottom: 3rem;
   display: flex;
-  flex-direction: column;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  justify-content: flex-start; /* all boxes on right */
 }
 
-/* .experience-card:hover,
-.experience-card:focus {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow);
-} */
-
-.experience-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+/* Marker */
+.timeline-marker {
+  position: absolute;
+  left: 30px; /* aligns with timeline line */
+  width: 20px;
+  height: 20px;
+  background: #F2507B;
+  border: 4px solid #111827;
+  border-radius: 50%;
+  z-index: 2;
+  top: 0;
 }
 
-.experience-title {
-  font-size: 1.25rem;
+/* Content Box */
+.timeline-content {
+  background: #1f2937;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+  width: calc(100% - 60px);
+  margin-left: 50px; /* distance from timeline */
+  transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+}
+
+/* Date */
+.timeline-date {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  background: linear-gradient(90deg, #F2507B, #a12647);
+  color: white;
+  border-radius: 9999px;
+  font-size: 0.85rem;
   font-weight: 600;
-  margin-bottom: 0.25rem;
-  color: var(--text);
+  margin-bottom: 1rem;
 }
 
-.experience-role {
-  font-size: 1rem;
-  color: var(--text-light);
-  margin-bottom: 1rem;
-  font-style: italic;
+/* Title & Company */
+.timeline-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #fff;
 }
 
-.tech-badges {
+.timeline-company {
+  font-size: 1.1rem;
+  color: var(--primary);
+  font-weight: 600;
   margin-bottom: 1rem;
+}
+
+/* Description with normal bullets */
+.timeline-description {
+  list-style-type: disc; /* normal bullets */
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+  color: #d1d5db;
+}
+
+.timeline-description li {
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+  padding-left: 0; /* remove pseudo padding */
+  position: relative;
+}
+
+/* Remove any previous pseudo bullet */
+.timeline-description li::before {
+  content: none;
+}
+
+/* Tags */
+.timeline-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
 }
 
-.tech-badge {
-  background-color: var(--primary);
-  color: var(--bg);
-  padding: 0.25rem 0.75rem;
-  border-radius: 20px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  user-select: none;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+.tag-pill {
+  padding: 0.4rem 0.8rem;
+  background: #374151;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #d1d5db;
 }
 
-.experience-points {
-  list-style: none;
-  margin-left: 0;
-  padding-left: 0;
-  color: var(--text);
-  font-size: 1rem;
-  line-height: 1.5;
-  flex-grow: 1;
-}
-
-.experience-points li {
-  position: relative;
-  padding-left: 1.5rem;
-  margin-bottom: 0.8rem;
-}
-
-.experience-points li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0.6rem;
-  width: 0.5rem;
-  height: 0.5rem;
-  background-color: var(--primary);
-  border-radius: 50%;
-}
-
-/* Responsive adjustments */
+/* Responsive */
 @media (max-width: 768px) {
-  .experience-section {
-    padding: 3rem 1.5rem;
+  .timeline {
+    padding-left: 40px;
   }
 
-  .section-title {
-    font-size: 2rem;
-    margin-bottom: 2rem;
+  .timeline-marker {
+    left: 20px;
   }
 
-  .experience-title {
-    font-size: 1.15rem;
-  }
-
-  .experience-role {
-    font-size: 0.95rem;
-  }
-
-  .tech-badge {
-    font-size: 0.8rem;
-    padding: 0.2rem 0.6rem;
-  }
-
-  .experience-points {
-    font-size: 0.95rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .experience-section {
-    padding: 1.5rem 0.75rem;
-  }
-
-  .experience-card {
-    padding: 1.25rem 1rem;
-    box-shadow: 0 2px 8px rgba(70, 70, 70, 0.06); /* Softer shadow on mobile */
-  }
-
-  .experience-card:hover {
-    transform: translateY(0.5px); /* tiny lift */
-    box-shadow: 0 4px 10px rgba(70, 70, 70, 0.05); /* very soft shadow */
-  }
-
-  .tech-badges {
-    font-size: 0.75rem;
-    gap: 0.35rem;
-  }
-
-  .experience-points {
-    font-size: 0.9rem;
-  }
-
-  .experience-points li {
-    padding-left: 1.25rem;
-    font-size: 0.9rem;
-  }
-
-  .experience-points li::before {
-    top: 0.55rem;
-    width: 0.4rem;
-    height: 0.4rem;
-  }
-
-  .section-title {
-    font-size: 1.75rem;
-  }
-
-  .experience-title {
-    font-size: 1rem;
-  }
-
-  .experience-role {
-    font-size: 0.9rem;
+  .timeline-content {
+    width: calc(100% - 40px);
+    margin-left: 40px;
   }
 }

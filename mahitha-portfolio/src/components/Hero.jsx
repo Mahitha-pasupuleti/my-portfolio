@@ -1,6 +1,6 @@
 import './Hero.css';
-import mahithaImage from '../assets/Test.jpg';
-import { FaLinkedin, FaGithub } from 'react-icons/fa';
+import mahithaImage from '../assets/NoBg.png';
+import { FaLinkedin, FaGithub, FaMedium } from 'react-icons/fa';
 import { SiLeetcode } from "react-icons/si";
 import { Typewriter } from 'react-simple-typewriter';
 
@@ -11,9 +11,9 @@ function Hero() {
         <div className="typewriter">
           <Typewriter
             words={[
-              "I'm a passionate software developer.",
-              "I love building scalable applications.",
-              "I enjoy debugging.",
+              "I write code that humans and machines love.",
+              "Building scalable apps, one line at a time.",
+              "Solving problems, shipping features.",
             ]}
             loop={0}
             cursor
@@ -60,6 +60,13 @@ function Hero() {
               rel="noopener noreferrer"
             >
               <SiLeetcode />
+            </a>
+            <a
+              href="https://medium.com/@mahithapasupuleti"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaMedium />
             </a>
           </div>
         </div>

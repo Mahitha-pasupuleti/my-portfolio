@@ -7,13 +7,15 @@ import Projects from './sections/Projects.jsx';
 import TechStack from './sections/TechStack.jsx';
 import Contact from './sections/Contact.jsx';
 import Footer from './sections/Footer.jsx';
+import MediumArticles from './sections/MediumArticles.jsx'
 import NakerBackground from './components/NakerBackground.jsx';
 import ExperienceSection from './sections/ExperienceSection.jsx';
+import Achievements from './sections/Achievements.jsx'
 import './App.css';
 
 function App() {
   const [theme, setTheme] = useState(() => 
-  document.documentElement.classList.contains('dark-mode') ? 'dark' : 'light'
+  'dark'
 );
 
 useEffect(() => {
@@ -31,7 +33,6 @@ useEffect(() => {
     <>
       {/* Show background only in dark mode */}
       {theme === 'dark' && <NakerBackground />}
-
       <main className="relative z-10">
         <ThemeToggle theme={theme} setTheme={setTheme} />
         <Navbar />
@@ -39,6 +40,8 @@ useEffect(() => {
         <ExperienceSection />
         <Projects />
         <TechStack />
+        <MediumArticles />
+        <Achievements />
         <Contact />
         <Footer />
       </main>
