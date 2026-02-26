@@ -165,7 +165,7 @@ const skillsData = [
   {
     category: "UI/Frontend",
     iconClass: "fas fa-palette",
-    skills: ["React", "Redux", "HTML5", "CSS3", "Sass", "Next.js", "Responsive Design", 
+    skills: ["React", "Redux", "Angular", "HTML5", "CSS3", "Sass", "Next.js", "Responsive Design", 
       "Tailwind CSS", "Web Accessibility (WCAG 2.2)"]
   },
   {
