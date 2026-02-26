@@ -1,5 +1,5 @@
 import './Hero.css';
-import mahithaImage from '../assets/NoBg.png';
+import mahithaImage from '../assets/DP3.png';
 import { FaLinkedin, FaGithub, FaMedium } from 'react-icons/fa';
 import { SiLeetcode } from "react-icons/si";
 import { Typewriter } from 'react-simple-typewriter';
